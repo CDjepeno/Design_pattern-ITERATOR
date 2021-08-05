@@ -13,13 +13,14 @@ export class MealCafeteria {
 
   addMeal(name: string, description: string, vegetarian: boolean, price: number) {
     let meal: Meal = new Meal(name, description, vegetarian, price)
+    
     if(this.mealCount >= this.MAX_MEALS) {
-      return new Error("Désolé, le menu est plein: Impossible d'ajouter un plat.")
+      return new Error("Désolé, le menu est plein: Impossible d'ajouter un plat pour la cafeteria.")
     } else {
       this.meals[this.mealCount] = meal 
-      this.mealCount = this.mealCount + 1
+      this.mealCount += 1
+      this.meals.push(meal)
     }
-    this.meals.push(meal)
   }
 
   createIterator(): IIterator {

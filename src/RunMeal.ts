@@ -3,7 +3,7 @@ import { MealCreperie } from './classes/MealCreperie';
 import { Server } from './classes/Server';
 import { IIterator } from './interfaces/IIterator';
 export class RunMeal {
-  static main(): string {
+  static main1(): string {
     let mealCreperie = new MealCreperie()
     let mealCafeteria = new MealCafeteria()
 
